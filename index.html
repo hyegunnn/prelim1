@@ -1,37 +1,27 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Number or String</title>
-    <link rel="stylesheet" type="text/css" href="styleA.css">
+	<title>Value Type Identifier</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('form').submit(function(e) {
+				e.preventDefault();
+				var value = $('input[type=text]').val();
+				if($.isNumeric(value)) {
+					window.open('number.html', '_blank');
+				} else {
+					window.open('string.html', '_blank');
+				}
+			});
+		});
+	</script>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <div class="page-header">
-                    <h1>Identify String or Number</h1>
-                </div>
-                <p1>Identify if String or Number:</p1>
-                <form method="POST">
-                    <div class="form-group">
-                        <label for="inputValue">Value:</label>
-                        <input type="text" name="inputValue" id="inputValue" required>
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Enter</button>
-                </form>
-                <?php
-                if(isset($_POST['submit'])){
-                    $inputValue = $_POST['inputValue'];
-                    if(is_numeric($inputValue)){
-                        echo "<script>alert('The value entered is a number.')</script>";
-                    } else {
-                        echo "<script>alert('The value entered is a string.')</script>";
-                    }
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="scriptA.js"></script>
+	<form>
+		<label for="value">Enter a value:</label>
+		<input type="text" id="value" name="value" required>
+		<button type="submit">Submit</button>
+	</form>
 </body>
 </html>
