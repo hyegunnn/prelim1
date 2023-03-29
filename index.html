@@ -1,28 +1,37 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Identify String or Number</title>
-    <link rel="stylesheet" href="styleA.css">
+    <meta charset="UTF-8">
+    <title>Number or String</title>
+    <link rel="stylesheet" type="text/css" href="styleA.css">
 </head>
 <body>
     <div class="container">
-        <h1>Identify String or Number</h1>
-        <form method="post" action="processA.php">
-            <label for="input">Enter a value:</label>
-            <input type="text" id="input" name="input" required>
-            <input type="submit" value="Submit">
-        </form>
-        <?php
-	if(isset($_POST['submit'])) {
-		$value = $_POST['value'];
-
-		if(is_numeric($value)) {
-			echo "<script>alert('The value entered is a number.');</script>";
-		} else {
-			echo "<script>alert('The value entered is a string.');</script>";
-		}
-	}
-	?>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="page-header">
+                    <h1>Identify String or Number</h1>
+                </div>
+                <p1>Identify if String or Number:</p1>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="inputValue">Value:</label>
+                        <input type="text" name="inputValue" id="inputValue" required>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary">Enter</button>
+                </form>
+                <?php
+                if(isset($_POST['submit'])){
+                    $inputValue = $_POST['inputValue'];
+                    if(is_numeric($inputValue)){
+                        echo "<script>alert('The value entered is a number.')</script>";
+                    } else {
+                        echo "<script>alert('The value entered is a string.')</script>";
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </div>
+    <script type="text/javascript" src="scriptA.js"></script>
 </body>
 </html>
