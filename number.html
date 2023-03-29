@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/User/Desktop/prelim_B.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
 	<title>Number</title>
+	<style type="text/css">
+		body {
+			background-color: #d6eaf8;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		.number {
+			color: #28a745;
+font-weight: bold;
+		}
+	</style>
 </head>
 <body>
-	<h1>Entered Value is a Number</h1>
-
-
-</body></html>
+	<h1>Number</h1>
+	<p>The value you entered is:</p>
+	<p class="number"><?php echo $_POST['value']; ?></p>
+	<p>This is a number.</p>
+</body>
+</html>
