@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Passed, Failed or Invalid&gt;(Identify your Grade)</title>
+	<script src="./index1_files/jquery.min.js.download"></script>
+<link rel="stylesheet" type="text/css" href="styleB.css">	<script>
+		$(document).ready(function() {
+			$('form').submit(function(e) {
+				e.preventDefault();
+				var grade = $('input[type=text]').val();
+				if(grade >= 60 && grade <= 100) {
+					window.open('passed.html', '_blank');
+				} else if(grade >= 0 && grade < 60) {
+					window.open('failed.html', '_blank');
+				} else {
+					window.open('invalid.html', '_blank');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<label for="grade">Enter a grade:</label>
+		<input type="number" id="grade" name="grade" required="">
+		<button type="submit">Submit</button>
+	</form>
+
+
+</body></html>
