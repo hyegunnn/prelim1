@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-	<title>Passed, Failed or Invalid&gt;(Identify your Grade)</title>
-	<script src="./index1_files/jquery.min.js.download"></script>
-<link rel="stylesheet" type="text/css" href="styleB.css">	<script>
+<html>
+<head>
+	<title>Grade Identifier</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
 		$(document).ready(function() {
 			$('form').submit(function(e) {
 				e.preventDefault();
-				var grade = $('input[type=text]').val();
+				var grade = $('input[type=number]').val();
 				if(grade >= 60 && grade <= 100) {
-					window.open('passed.html', '_blank');
+					window.location.href = 'passed.html';
 				} else if(grade >= 0 && grade < 60) {
-					window.open('failed.html', '_blank');
+					window.location.href = 'failed.html';
 				} else {
-					window.open('invalid.html', '_blank');
+					window.location.href = 'invalid.html';
 				}
 			});
 		});
@@ -22,9 +22,8 @@
 <body>
 	<form>
 		<label for="grade">Enter a grade:</label>
-		<input type="number" id="grade" name="grade" required="">
+		<input type="number" id="grade" name="grade" required>
 		<button type="submit">Submit</button>
 	</form>
-
-
-</body></html>
+</body>
+</html>
