@@ -16,11 +16,11 @@ form.addEventListener('submit', function(e) {
 
 	let resultStatus = '';
 	if (average >= 60 && average <= 100) {
-		resultStatus = 'PASSED';
+		resultStatus = '⭐PASSED⭐';
 	} else if (average >= 0 && average < 60) {
-		resultStatus = 'FAILED';
+		resultStatus = 'FAILED 💔';
 	} else {
-		resultStatus = 'INVALID';
+		resultStatus = 'INVALID 😶';
 	}
 
 	const resultDiv = document.createElement('div');
