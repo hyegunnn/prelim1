@@ -21,6 +21,7 @@ form.addEventListener('submit', function(e) {
 		resultStatus = 'FAILED 💔';
 	} else {
 		resultStatus = 'INVALID 😶';
+		
 	}
 
 	const resultDiv = document.createElement('div');
