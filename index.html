@@ -12,6 +12,17 @@
             <input type="text" id="input" name="input" required>
             <input type="submit" value="Submit">
         </form>
+        <?php
+	if(isset($_POST['submit'])) {
+		$value = $_POST['value'];
+
+		if(is_numeric($value)) {
+			echo "<script>alert('The value entered is a number.');</script>";
+		} else {
+			echo "<script>alert('The value entered is a string.');</script>";
+		}
+	}
+	?>
     </div>
 </body>
 </html>
