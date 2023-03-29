@@ -16,7 +16,7 @@
                 echo "<p>The value entered, <strong>$input</strong>, is a string.</p>";
             }
         ?>
-        <p><a href="index.php">&laquo; Back to form</a></p>
+        <p><a href="index.html">&laquo; Back to form</a></p>
     </div>
 </body>
 </html>
